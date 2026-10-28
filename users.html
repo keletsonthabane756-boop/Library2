@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Users - Community Library</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <button class="menu-button" id="menuButton">
+        ☰
+    </button>
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-brand">
+
+
+            <div>
+                <h2>Community</h2>
+                <span>Library</span>
+            </div>
+
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html" class="nav-link">
+                Dashboard
+            </a>
+
+            <a href="books.html" class="nav-link">
+                Books
+            </a>
+
+            <a href="transactions.html" class="nav-link">
+                Transactions
+            </a>
+
+            <a href="users.html" class="nav-link active">
+                Users
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+            <a href="#" class="nav-link logout-link">
+                Logout
+            </a>
+        </div>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+                <h1>User Management</h1>
+                <p>Add and manage library users</p>
+            </div>
+
+        </header>
+
+        <div class="user-layout">
+
+            <section class="content-card form-card">
+
+                <h2 id="userFormTitle">Add User</h2>
+
+                <form id="userForm">
+
+                    <input type="hidden" id="userId">
+
+                    <div class="form-group">
+
+                        <label for="userName">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="userName"
+                            placeholder="Enter full name"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="membershipId">
+                            Membership ID
+                        </label>
+
+                        <input
+                            type="text"
+                            id="membershipId"
+                            placeholder="e.g. MEM001"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="userRole">
+                            Role
+                        </label>
+
+                        <select id="userRole" required>
+
+                            <option value="Member">
+                                Member
+                            </option>
+
+                            <option value="Librarian">
+                                Librarian
+                            </option>
+
+                            <option value="Admin">
+                                Admin
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="userUsername">
+                            Username
+                        </label>
+
+                        <input
+                            type="text"
+                            id="userUsername"
+                            placeholder="Enter username"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="userPassword">
+                            Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="userPassword"
+                            placeholder="Enter password"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="form-buttons">
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                        >
+                            Save User
+                        </button>
+
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            id="cancelUserEdit"
+                            style="display:none;"
+                        >
+                            Cancel
+                        </button>
+
+                    </div>
+
+                    <p id="userMessage" class="message"></p>
+
+                </form>
+
+            </section>
+
+            <section class="content-card">
+
+                <div class="section-header">
+
+                    <div>
+                        <h2>Library Users</h2>
+                        <p>Registered users</p>
+                    </div>
+
+                    <input
+                        type="text"
+                        id="userSearch"
+                        class="search-input"
+                        placeholder="Search users..."
+                    >
+
+                </div>
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Name</th>
+                                <th>Membership ID</th>
+                                <th>Role</th>
+                                <th>Username</th>
+                                <th>Actions</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="userTableBody">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

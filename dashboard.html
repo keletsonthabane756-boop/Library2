@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - Community Library</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Mobile menu button -->
+    <button class="menu-button" id="menuButton">
+        ☰
+    </button>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-brand">
+            <div>
+                <h2>Community</h2>
+                <span>Library</span>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html" class="nav-link active">
+                Dashboard
+            </a>
+
+            <a href="books.html" class="nav-link">
+                Books
+            </a>
+
+            <a href="transactions.html" class="nav-link">
+                Transactions
+            </a>
+
+            <a href="users.html" class="nav-link">
+                Users
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a href="#" class="nav-link logout-link">
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+    <!-- Main content -->
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+                <h1>Dashboard</h1>
+                <p>Welcome to the Community Library Management System</p>
+            </div>
+
+            <div class="user-info">
+                <span>👤</span>
+                <div>
+                    <strong id="currentUserName">Admin</strong>
+                    <small>Administrator</small>
+                </div>
+            </div>
+
+        </header>
+
+        <!-- Dashboard cards -->
+        <section class="dashboard-cards">
+
+            <div class="stat-card blue-card">
+                <div>
+                    <p>Total Books</p>
+                    <h2 id="totalBooks">0</h2>
+                </div>
+
+
+            <div class="stat-card teal-card">
+                <div>
+                    <p>Total Copies</p>
+                    <h2 id="totalCopies">0</h2>
+                </div>
+
+
+            <div class="stat-card orange-card">
+                <div>
+                    <p>Low Stock</p>
+                    <h2 id="lowStockBooks">0</h2>
+                </div>
+
+
+            <div class="stat-card green-card">
+                <div>
+                    <p>Transactions</p>
+                    <h2 id="totalTransactions">0</h2>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Availability -->
+        <section class="content-card">
+
+            <div class="section-header">
+
+                <div>
+                    <h2>Book Availability</h2>
+                    <p>Current books and quantities in the library</p>
+                </div>
+
+                <input
+                    type="text"
+                    id="dashboardSearch"
+                    class="search-input"
+                    placeholder="Search books..."
+                >
+
+            </div>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Genre</th>
+                            <th>ISBN</th>
+                            <th>Available</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="dashboardBookTable">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <!-- Quick actions -->
+        <section class="content-card">
+
+            <h2>Quick Actions</h2>
+
+            <div class="quick-actions">
+
+                <a href="books.html" class="quick-action">
+                    <strong>Add Book</strong>
+                    <small>Add a new book</small>
+                </a>
+
+                <a href="transactions.html" class="quick-action">
+                    <strong>Transaction</strong>
+                    <small>Borrow or return</small>
+                </a>
+
+                <a href="users.html" class="quick-action">
+                    <strong>Manage Users</strong>
+                    <small>Add library users</small>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

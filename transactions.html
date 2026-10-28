@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Transactions - Community Library</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <button class="menu-button" id="menuButton">
+        ☰
+    </button>
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-brand">
+
+
+            <div>
+                <h2>Community</h2>
+                <span>Library</span>
+            </div>
+
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html" class="nav-link">
+                Dashboard
+            </a>
+
+            <a href="books.html" class="nav-link">
+                Books
+            </a>
+
+            <a href="transactions.html" class="nav-link active">
+                Transactions
+            </a>
+
+            <a href="users.html" class="nav-link">
+                Users
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+            <a href="#" class="nav-link logout-link">
+                Logout
+            </a>
+        </div>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+                <h1>Transactions</h1>
+                <p>Manage book borrowing, returns and stock</p>
+            </div>
+
+        </header>
+
+        <div class="transaction-layout">
+
+            <!-- Transaction form -->
+            <section class="content-card form-card">
+
+                <h2>New Transaction</h2>
+
+                <p class="form-description">
+                    Update the available quantity of a book.
+                </p>
+
+                <form id="transactionForm">
+
+                    <div class="form-group">
+
+                        <label for="transactionBook">
+                            Select Book
+                        </label>
+
+                        <select id="transactionBook" required>
+                            <option value="">
+                                -- Select a book --
+                            </option>
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="transactionType">
+                            Transaction Type
+                        </label>
+
+                        <select id="transactionType" required>
+
+                            <option value="">
+                                -- Select type --
+                            </option>
+
+                            <option value="Borrow">
+                                Borrow
+                            </option>
+
+                            <option value="Return">
+                                Return
+                            </option>
+
+                            <option value="Stock Added">
+                                Add Stock
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="transactionQuantity">
+                            Quantity
+                        </label>
+
+                        <input
+                            type="number"
+                            id="transactionQuantity"
+                            min="1"
+                            placeholder="Enter quantity"
+                            required
+                        >
+
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+                        Complete Transaction
+                    </button>
+
+                    <p id="transactionMessage" class="message"></p>
+
+                </form>
+
+            </section>
+
+            <!-- Transaction history -->
+            <section class="content-card">
+
+                <div class="section-header">
+
+                    <div>
+                        <h2>Transaction History</h2>
+                        <p>Record of all stock transactions</p>
+                    </div>
+
+                </div>
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Book</th>
+                                <th>Type</th>
+                                <th>Quantity</th>
+                                <th>Date</th>
+                                <th>Action</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="transactionTableBody">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
